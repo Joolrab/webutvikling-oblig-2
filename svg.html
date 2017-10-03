@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SVG</title>
+        <link rel="stylesheet" href="stil/stil.css" type="text/css"/>
+        <link rel="stylesheet" href="stil/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css"/>
+    </head>
+    <body>
+            <div class="article-grid-wrapper">
+                <header>
+                    <h1>Webutvikling</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a class="menuitems" href="index.html">Hjem</a></li>
+                        <li><a class="menuitems" href="artikler.html">Artikler</a></li>
+                        <li><a class="menuitems" href="linkarkiv.html">Linkarkiv</a></li>
+                    </ul>
+                </nav>
+                <article class="article-style">
+                    <h1>SVG</h1>
+                    <p><i class="fa fa-clock-o icon" aria-hidden="true"></i>3. Oktober 2017</p>
+                    <p>SVG står for Scalable Vector Graphics og er et 2D vektorbasert bildeformat. Det er bygget opp av lesbar XML-kode. Den store fordelen med SVG-grafikk er at den kan skaleres opp uten at kvaliteten
+                    blir dårligere, imotsetning til på andre bildeformater som baserer seg på bitmap-grafikk der piksler blir forstørret. Dette er fordi svg-grafikken blir skapt ved hjelp av matematiske formler, beregninger og figurer.
+                    SVG kan vi benytte for å lage logoer, ikoner, animasjoner, illustrasjoner, diagrammer og skjemaer blant annet. 
+                    Måter vi kan lage SVG-grafikk på er enten å kode den for manuelt eller å benytte et bildebehandlingsprogram som støtter vektorgrafikk. Eksempler er Inkscape og Adobe Illustrator.
+                    Når vi lager SVG-grafikk kan vi enten linke den opp i andre elementer eller kode den rett i HTML'en. SVG kan også manipuleres med CSS eller Javascript. Formatet er støttet i HTML5.</p>
+                    <p>Her følger noen eksempler på SVG-grafikk:</p>
+                    <!-- Lager SVG-elementer. Definerer svg-områdets vidde og bredde -->
+                    <svg width="200" height="200">
+                        <!-- Både rektangelet og teksten sin plassering defineres innenfor svg-området -->
+                        <rect width="200" height="200" style="fill:#861A1A;" />
+                        <!-- x og y angir hvor teksten begynner å skrives ut -->
+                        <text x="50" y="100" fill="lightblue">Tekst inne i SVG</text>
+                    </svg>
+                    <svg width="200" height="200">
+                        <!-- points angir punktene til polygonet på formen x,y -->
+                        <polygon style="fill:lawngreen;" points="30,30 90,30 150,140 200,190 20,190" />
+                        <text x="30" y="100" fill="red">Norgreenian</text>
+                    </svg>
+                    <svg width="300" height="200">
+                        <!-- cx og cy angir ellipsens senterkoordinat på x og y-aksen. rx og ry angir radius på x og y-aksen  -->
+                        <ellipse cx="150" cy="100" rx="100" ry="50" style="fill:orange;stroke:blue;stroke-width:2" />
+                        <circle cx="150" cy="100" r="30" stroke="black" stroke-width="3" fill="purple" />
+                    </svg>
+                </article>
+                <footer>
+                    <p><a class="button" href="omdennesiden.html">Om denne siden<i class="fa fa-arrow-right icon" aria-hidden="true"></i></a></p>
+                </footer>
+            </div>
+    </body>
+</html>

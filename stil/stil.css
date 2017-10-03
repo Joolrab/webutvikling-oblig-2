@@ -1,0 +1,160 @@
+@import url('normalize.css');
+
+ * {
+     box-sizing: border-box;
+     margin: 0 auto;
+ }
+
+ body {
+     background-image: url('bakgrunn.jpg');
+     background-position: 50% 50%; 
+     font-size: 18px;
+     text-align: center;
+ }
+
+.grid-wrapper {
+    display: grid;
+    max-width: 1200px;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto auto auto 100px;
+    grid-template-areas:    "header header nav"
+                            "info calendar calendar"
+                            "article article article"
+                            "article article article"
+                            "footer footer footer";
+    justify-content: space-between;
+}
+
+.boxes-grid-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	width: 100%;
+}
+
+.article-grid-wrapper {
+    display: grid;
+    max-width: 1200px;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas:    "header header nav"
+                            "article article article"
+                            "footer footer footer";
+    justify-content: space-between;
+}
+
+.article-style {
+    grid-column: 1/4;
+    text-align: center;
+    border-style: solid;
+    background-color: rgba(128, 128, 128, 0.53);
+} 
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+#info { grid-area: info; }
+#calendar { grid-area: calendar; }
+main { grid-area: article; }
+footer { grid-area: footer; }
+
+header {
+    color: white;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 20px 10px;
+}
+
+.menuitems {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.menuitems:active {
+    color: gray;
+}
+
+#info {
+    margin: 5px;
+    border-style: solid;
+    background-color: rgba(255, 0, 0, 0.55);
+}
+
+#calendar {
+    margin: 5px;
+    border-style: solid;
+    background-color: rgba(255, 162, 0, 0.68);
+}
+
+.article-box-style {
+    border-style: solid;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.53);
+}
+
+footer {
+    width: 100%;
+    border-style: solid;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 40px;
+}
+
+footer p a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 17px;
+}
+
+.button {
+    text-decoration: none;
+    width: 100px;
+    background-color: #2399A1;
+    color: black;
+    border: solid 1px black;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 2px;
+    float: right;
+}
+
+.button:visited {
+    background-color: grey;
+}
+
+.button:active {
+    background-color: #7CB5C7;
+}
+
+.icon {
+    margin: 5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+    background-color: grey;
+}
+
+tr:nth-child(even) {
+    background-color: darkgrey;
+}
+
+.article-style a {
+    display: block;
+}
+
+#sources {
+    font-weight: bold;
+}

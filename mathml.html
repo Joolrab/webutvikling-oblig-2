@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MathML</title>
+        <link rel="stylesheet" href="stil/stil.css" type="text/css"/>
+        <link rel="stylesheet" href="stil/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css"/>
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=MML_CHTML">
+        </script>
+    </head>
+    <body>
+            <div class="article-grid-wrapper">
+                <header>
+                    <h1>Webutvikling</h1>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a class="menuitems" href="index.html">Hjem</a></li>
+                        <li><a class="menuitems" href="artikler.html">Artikler</a></li>
+                        <li><a class="menuitems" href="linkarkiv.html">Linkarkiv</a></li>
+                    </ul>
+                </nav>
+                <article class="article-style">
+                    <h1>MathML</h1>
+                    <p><i class="fa fa-clock-o icon" aria-hidden="true"></i>3. Oktober 2017</p>
+                    <p>MathML (Math Markup Language) er et Markup Language som gir oss en strukturert måte å representere matematiske formler på. Det er bygd på XML - Extensible Markup Language, og er en slags praktisk bruk av dette språket.
+                    Den største fordelen med språket er at det gir oss en god måte å presentere matematikk på i mange ulike sammenhenger. Ikke bare på nettsider, men også i for eksempel dokumenter og forskningsrapporter på papir. 
+                    Samtidig er koden gjenbrukbar slik at det ikke nødvendigvis trenger å være så vanskelig å skape/implementere slike formler. En annen fordel er at MathML er konstruert slik at den skal kunne være opplesbar
+                    med talesyntese.Det finnes to typer av MathML: C-MathML og P-MathML som står for henholdsvis content (innhold) og presentation (presentasjon). C-MathML forteller hvordan uttrykket er og oppfattes rent matematisk og beholder semantikken.
+                    P-MathML beskriver hvordan formelen skal vises rent visuelt. MathML har nå blitt en del av HTML5 standarden, men ikke alle nettlesere støtter det likevel. Et eksempel er Chrome som ikke lenger støtter Math-ML.
+                    Likevel finnes det måter å omgå dette på ved for eksempel å legge til et ekstra javascript-bibliotek som kalles MathJax i koden.</p>
+                    <p>Her kommer noen eksempler på bruk av MathML (se koden for forklaringer):</p>
+                    <p> ABC-formelen:
+                    <!-- Dette er Presentation-MathML. Vi markerer at MathML skal benyttes med <math> taggen -->
+                    <math>
+                        <mi>a</mi>
+                        <!-- <msup> står for superscript og betyr at vi opphøyer tekstplasseringen, tilsvarende står <msub> for at vi senker -->
+                        <msup>
+                            <!-- <mi> står for identifikatorer og kan inneholde variabler, funksjonsnavn og symbolske konstanter-->
+                            <mi>x</mi>
+                            <!-- <mn> står for nummer som er heltall eller et reelt tall  -->
+                            <mn>2</mn>
+                        </msup>
+                        <!-- <mo> står for matematiske operatorer  -->
+                        <mo>+</mo>
+                        <mi>b</mi>
+                        <mi>x</mi>
+                        <mo>+</mo>
+                        <mi>c</mi>
+                    </math>
+                    </p>
+                    <p>Bruk av styling:
+                    <math>
+                        <mi>x</mi>
+                        <mo>=</mo>
+                        <!-- mathbackground setter bakgrunnsfarge på elementet -->
+                        <mi mathbackground="red">y</mi><mi>m</mi>
+                        <mo>+</mo>
+                        <!-- mathcolor setter farge på elementet -->
+                        <mi mathcolor="blue">b</mi>
+                        <mo>=</mo>
+                        <!-- ved å samle elementer i <mstyle> kan en stile flere elementer etter like regler -->
+                        <mstyle mathbackground="green">
+                            <mn>3</mn><mo>n</mo>
+                        </mstyle>
+                        <mi>y</mi>
+                        <mo>+</mo>
+                        <!-- mathvariant setter fontstil på elementet -->
+                        <mn mathcolor="yellow" mathvariant="bold">4</mn>
+                    </math>
+                    </p>
+                    <p>Bruk av klammeparantes:
+                        <math>
+                            <!-- mfenced lager klammeparantes -->
+                            <mfenced>
+                                <!-- mfrac lager en fraksjon -->
+                                <mfrac>
+                                    <!-- mrow lager en rad som er horisontalt justert  -->
+                                    <mrow>
+                                        <mi>x</mi>
+                                        <mo>-</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mn>3</mn>
+                                </mfrac>
+                         </mfenced>
+                        </math>
+                    </p>
+                    <!-- Dette er Content-MathML. Har kommentert den ut da MathJax kun støtter Presentation.
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                // <apply> legger en hendelse til et uttrykk
+                                <apply>
+                                    // legger til eksponent
+                                    <power/>
+                                    <apply>
+                                        // legger til addisjonsoperatoren 
+                                        <plus/>
+                                        // legger til variablene a og b
+                                        <ci>a</ci>
+                                        <ci>b</ci>
+                                    </apply>
+                                    //legger til tallet 2
+                                    <cn>2</cn>
+                                </apply>
+                            </mrow>
+                        </math>
+                    -->
+                    <p>Som vi ser åpner MathML opp for mange muligheter. Ved bruk av ulike tagger kan vi skille mellom hva som er operatorer, identifikatorer og nummer. En kan enkelt heve eller senke skriften
+                    og legge uttrykk inn i klammeparanteser. Vi har til og med muligheten for å style uttrykkene med farger og bakgrunnsfarger!</p>
+                    <p id="sources">Kilder:</p> <a href="http://danielscully.co.uk/projects/mathml-guide/gettingstarted.php">A Beginner's Guide to MathML - Getting Started</a></p>
+                    <a href="http://danielscully.co.uk/projects/mathml-guide/groupstyle.php">A Beginner's Guide to MathML - Grouping</a>
+                    <a href="http://danielscully.co.uk/projects/mathml-guide/brackets.php">A Beginner's Guide to MathML - Brackets</a>
+                    <a href="https://www.w3.org/TR/MathML2/chapter2.html">W3 - MathML Fundamentals</a>
+                </article>
+                <footer>
+                    <p><a class="button" href="omdennesiden.html">Om denne siden<i class="fa fa-arrow-right icon" aria-hidden="true"></i></a></p>
+                </footer>
+            </div>
+    </body>
+</html>
