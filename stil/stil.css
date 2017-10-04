@@ -1,7 +1,7 @@
 @import url('normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Roboto+Slab');
 
- * {
+ body * {
      box-sizing: border-box;
      margin: 0 auto;
  }
@@ -71,6 +71,7 @@ header {
     color: white;
     font-family: 'Audiowide', cursive;
     margin-left: 100px;
+    margin-top: 10px;
 }
 
 nav {
@@ -88,18 +89,24 @@ nav ul li {
     font-size: 17px;
 }
 
-.menuitems:active {
+.menuitems:hover:active {
     color: gray;
+}
+
+.menuitems:hover {
+    color: lightgray;
 }
 
 #info {
     margin: 5px;
+    padding: 5px;
     border-style: solid;
     background-color: rgba(255, 0, 0, 0.55);
 }
 
 #calendar {
     margin: 5px;
+    padding: 5px;
     border-style: solid;
     background-color: rgba(255, 162, 0, 0.68);
 }
@@ -113,17 +120,11 @@ nav ul li {
 footer {
     width: 100%;
     border-style: solid;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 footer p {
     margin: 40px;
-}
-
-footer p a{
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 17px;
 }
 
 .button {
@@ -143,9 +144,13 @@ footer p a{
     background-color: grey;
 }
 
-.button:active {
-    background-color: #7CB5C7;
+.button:hover:active {
+    background-color: #1E4FBB;
 }
+
+.button:hover {
+    background-color: #031EB8;
+} 
 
 .icon {
     margin: 5px;
@@ -188,4 +193,13 @@ h4 {
     grid-template-rows: auto;
     grid-template-areas:    "calendar-column-1 calendar-column-2 calendar-column-3";  
     justify-content: space-between;
+}
+
+.footer-button {
+    float: left;
+}
+
+#footer-text {
+    float:right;
+    margin-top: 10px;
 }
