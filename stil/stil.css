@@ -60,6 +60,10 @@ nav { grid-area: nav; }
 #calendar { grid-area: calendar; }
 main { grid-area: article; }
 footer { grid-area: footer; }
+#calendar-column-1{ grid-area:calendar-column-1; }
+#calendar-column-2{ grid-area:calendar-column-2; }
+#calendar-column-3{ grid-area:calendar-column-3; }
+
 
 header {
     color: white;
@@ -157,4 +161,22 @@ tr:nth-child(even) {
 
 #sources {
     font-weight: bold;
+}
+
+h3 {
+    display: block;
+}
+
+h4 {
+    display: inline;
+}
+
+#calendar-wrapper {
+    display: grid;
+    width: 100%;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:    "calendar-column-1 calendar-column-2 calendar-column-3";  
+    justify-content: space-between;
 }
