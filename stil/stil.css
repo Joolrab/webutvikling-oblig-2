@@ -165,6 +165,7 @@ tr:nth-child(even) {
 
 h3 {
     display: block;
+    margin: 5px;
 }
 
 h4 {
