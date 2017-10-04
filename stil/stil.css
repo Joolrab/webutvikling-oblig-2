@@ -51,8 +51,8 @@
 
 .article-style {
     grid-column: 1/4;
-    text-align: center;
     border-style: solid;
+    padding: 5px;
     background-color: rgba(128, 128, 128, 0.53);
 } 
 
@@ -202,4 +202,8 @@ h4 {
 #footer-text {
     float:right;
     margin-top: 10px;
+}
+
+p {
+    margin: 5px;
 }
