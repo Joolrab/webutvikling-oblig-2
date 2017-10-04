@@ -172,10 +172,6 @@ tr:nth-child(even) {
     display: block;
 }
 
-#sources {
-    font-weight: bold;
-}
-
 h3 {
     display: block;
     margin: 5px;
@@ -206,4 +202,12 @@ h4 {
 
 p {
     margin: 5px;
+}
+
+img {
+    height: 450px;
+}
+
+.bold {
+    font-weight: bold;
 }
